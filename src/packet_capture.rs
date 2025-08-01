@@ -10,7 +10,7 @@ use pnet::packet::{
     ethernet::{EtherTypes, EthernetPacket},
     ip::{IpNextHeaderProtocol, IpNextHeaderProtocols},
     ipv4::Ipv4Packet,
-    tcp, Packet,
+    tcp, Packet, PacketSize
 };
 use pnet_datalink::{Channel::Ethernet, DataLinkReceiver, DataLinkSender, NetworkInterface};
 
@@ -136,11 +136,12 @@ fn handle_tcp_segment(source: IpAddr, destination: IpAddr, packet: &[u8]) {
     match segment {
         Some(segment) => {
             println!(
-                "{}:{} -> {}:{}",
+                "{}:{} -> {}:{} (packet_size: {})",
                 source,
                 segment.get_source(),
                 destination,
-                segment.get_destination()
+                segment.get_destination(),
+                segment.packet_size()
             );
             //ここでTCPパケットの送信元IPv4アドレス&ポート + 宛先IPv4アドレス&ポートが見える
         }
