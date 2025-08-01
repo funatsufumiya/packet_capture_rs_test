@@ -24,7 +24,7 @@ $ cargo run
 
 [Original code](https://qiita.com/m10i/items/f8d3db359f150aafc83b)'s author is [MINETA Hiroki (@m10i)](https://qiita.com/m10i) on [Qiita](https://qiita.com/).
 
-According to [Terms of use of Qiita](https://qiita.com/terms), you have rights to use these codes if you are Qiita's registered user.
+According to [Terms of use of Qiita](https://qiita.com/terms), you have rights to use these codes with any restrictions or obligations.
 
 > 7.3: 登録ユーザーは、本サイトに投稿したコード、スニペットなどプログラムに類するものに限り、他の登録ユーザーが商用私用問わず無償で使用することを許諾し、他の登録ユーザーはこれを使用できるものとします。
 
