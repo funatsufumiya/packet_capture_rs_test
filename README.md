@@ -35,3 +35,5 @@ According to [Terms of use of Qiita](https://qiita.com/terms), you have rights t
 > 7.3: Registered users shall grant other registered users permission to use, free of charge, any code, snippets, or other program-related materials posted on this site, regardless of whether such use is for commercial or personal purposes, and other registered users shall be permitted to use such materials.
 
 > 7.4: The permission granted by registered users in the preceding paragraphs shall not be subject to any regional restrictions, copyright notice requirements, or other accompanying conditions.
+
+(As for my modification part of the code, I don't care. If you need, treat it as [WTFPL (v2)](https://en.wikipedia.org/wiki/WTFPL) or MIT or Apache as you like.)
