@@ -20,25 +20,25 @@ pub fn ignition() {
     #[cfg(not(target_os = "windows"))]
     let is_windows = false;
 
-    let mut _best_device_name: String = "\\Device\\NPF_".to_string();
-
-    match netdev::get_default_interface() {
+    let _best_device_name: String = match netdev::get_default_interface() {
         Ok(_best_interface) => {
             println!("Best Interface Name: {}", _best_interface.name);
-            if is_windows {
-                _best_device_name += &_best_interface.name;
-            } else {
-                _best_device_name = _best_interface.name;
-            }
+            
             println!(
                 "Friendly Name: {:?}",
                 _best_interface.friendly_name.unwrap()
             );
+
+            if is_windows {
+                "\\Device\\NPF_".to_string() + &_best_interface.name
+            } else {
+                _best_interface.name
+            }
         }
         Err(ex) => {
             panic!("Error while find the best interface. {}", ex);
         }
-    }
+    };
 
     // すべてのネットワークインターフェースを取得
     let _all_interfaces: Vec<NetworkInterface> = pnet_datalink::interfaces();
